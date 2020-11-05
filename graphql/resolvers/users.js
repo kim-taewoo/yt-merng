@@ -41,9 +41,8 @@ module.exports = {
         SECRET_KEY,
         { expiresIn: '1h' }
       );
-
       return {
-        ...res.doc,
+        ...res._doc,
         id: res._id,
         token,
       };

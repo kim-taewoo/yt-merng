@@ -23,11 +23,9 @@ const typeDefs = gql`
   type Query {
     getPosts: [Post!]!
   }
-  type Mutation{
-    register(registerInput: RegisterInput)
+  type Mutation {
+    register(registerInput: RegisterInput): User!
   }
 `;
 
-module.exports = {
-  typeDefs
-}
+module.exports = typeDefs;
